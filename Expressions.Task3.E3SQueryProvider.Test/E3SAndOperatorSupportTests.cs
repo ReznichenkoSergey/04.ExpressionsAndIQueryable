@@ -25,6 +25,12 @@ namespace Expressions.Task3.E3SQueryProvider.Test
             var translator = new ExpressionToFtsRequestTranslator();
             Expression<Func<IQueryable<EmployeeEntity>, IQueryable<EmployeeEntity>>> expression
                 = query => query.Where(e => e.Workstation == "EPRUIZHW006" && e.Manager.StartsWith("John"));
+
+            var actual = translator.Translate(expression);
+
+            var cc = new FtsRequestGenerator("http://sitedomain.com");
+            var uri =  cc.GenerateRequestUrl(typeof(EmployeeEntity), actual);
+
             /*
              * The expression above should be converted to the following FTSQueryRequest and then serialized inside FTSRequestGenerator:
              * "statements": [
@@ -35,7 +41,13 @@ namespace Expressions.Task3.E3SQueryProvider.Test
              */
 
             // todo: create asserts for this test by yourself, because they will depend on your final implementation
-            throw new NotImplementedException("Please implement this test and the appropriate functionality");
+
+            //throw new NotImplementedException("Please implement this test and the appropriate functionality");
+            
+            var actualUrl = uri.ToString();
+
+            Assert.Contains("EPRUIZHW006", actualUrl);
+            Assert.Contains("John*", actualUrl);
         }
 
         #endregion

@@ -17,6 +17,8 @@ namespace Expressions.Task3.E3SQueryProvider.QueryProvider
 
         public IQueryable CreateQuery(Expression expression)
         {
+            Type itemType = TypeHelper.GetElementType(expression.Type);
+
             throw new NotImplementedException();
         }
 

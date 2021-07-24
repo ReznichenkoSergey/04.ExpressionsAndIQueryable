@@ -1,0 +1,14 @@
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.deps.json
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.dll
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.pdb
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.WebUtilities.dll
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.WebUtilities.xml
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\bin\Debug\netcoreapp2.1\Newtonsoft.Json.xml
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.csproj.AssemblyReference.cache
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.AssemblyInfoInputs.cache
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.AssemblyInfo.cs
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.csproj.CoreCompileInputs.cache
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.csproj.CopyComplete
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.dll
+D:\EducationTests\04.Expressions and IQueryable.Tasks.Week2_updated\Expressions.Task3.E3SQueryProvider\obj\Debug\netcoreapp2.1\Expressions.Task3.E3SQueryProvider.pdb

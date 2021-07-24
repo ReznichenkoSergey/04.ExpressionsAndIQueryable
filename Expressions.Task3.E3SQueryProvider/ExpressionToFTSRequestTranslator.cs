@@ -33,7 +33,29 @@ namespace Expressions.Task3.E3SQueryProvider
 
                 return node;
             }
+            if (node.Method.DeclaringType == typeof(string))
+            {
+                Visit(node.Object);
+                _resultStringBuilder.Append("(");
+
+                if ( (node.Method.Name == "EndsWith") || (node.Method.Name == "Contains") )
+                        _resultStringBuilder.Append("*");
+                
+                Visit(node.Arguments[0]);
+                
+                if ( (node.Method.Name == "StartsWith") || (node.Method.Name == "Contains") )
+                        _resultStringBuilder.Append("*");
+                
+                _resultStringBuilder.Append(")");
+                return node;
+            }
+
             return base.VisitMethodCall(node);
+        }
+
+        protected override Expression VisitConditional(ConditionalExpression node)
+        {
+            return node;
         }
 
         protected override Expression VisitBinary(BinaryExpression node)
@@ -42,17 +64,30 @@ namespace Expressions.Task3.E3SQueryProvider
             {
                 case ExpressionType.Equal:
                     if (node.Left.NodeType != ExpressionType.MemberAccess)
-                        throw new NotSupportedException($"Left operand should be property or field: {node.NodeType}");
-
-                    if (node.Right.NodeType != ExpressionType.Constant)
+                    {
+                        Visit(node.Right);
+                        _resultStringBuilder.Append("(");
+                        Visit(node.Left);
+                        _resultStringBuilder.Append(")");
+                    }
+                    else if (node.Right.NodeType != ExpressionType.Constant)
+                    {
                         throw new NotSupportedException($"Right operand should be constant: {node.NodeType}");
+                    }
+                    else if ((node.Left.NodeType == ExpressionType.MemberAccess) && (node.Right.NodeType == ExpressionType.Constant))
+                    {
+                        Visit(node.Left);
+                        _resultStringBuilder.Append("(");
+                        Visit(node.Right);
+                        _resultStringBuilder.Append(")");
+                    }
+                    break;
+                case ExpressionType.AndAlso:
 
                     Visit(node.Left);
-                    _resultStringBuilder.Append("(");
+                    _resultStringBuilder.Append("  AND  ");
                     Visit(node.Right);
-                    _resultStringBuilder.Append(")");
                     break;
-
                 default:
                     throw new NotSupportedException($"Operation '{node.NodeType}' is not supported");
             };
@@ -70,7 +105,6 @@ namespace Expressions.Task3.E3SQueryProvider
         protected override Expression VisitConstant(ConstantExpression node)
         {
             _resultStringBuilder.Append(node.Value);
-
             return node;
         }
 
